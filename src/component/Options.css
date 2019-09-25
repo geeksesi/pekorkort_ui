@@ -2,3 +2,12 @@
     margin: auto;
     text-align: center;
 }
+
+#components-dropdown-demo-placement .ant-btn {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.ant-row-flex{
+    padding: 20px 0px
+}

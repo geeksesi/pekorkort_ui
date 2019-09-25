@@ -23,6 +23,10 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
@@ -30,6 +34,6 @@ module.exports = {
     watch: true,
     watchOptions: {
         ignored: ['public_html/assets/*.js', 'node_modules'],
-        poll: 5000,
+        // poll: 5000,
     },
 };

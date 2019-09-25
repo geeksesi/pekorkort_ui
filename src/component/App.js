@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
-console.log("gj")
+import Options from "./Options";
+
+
 export default class App extends React.Component {
     
     render() {
         return (
-            <div className="component-app">
-                <h1>HELLO WORLD</h1>
+            <div className="App">
+                <Options></Options>
             </div>
         );
     }

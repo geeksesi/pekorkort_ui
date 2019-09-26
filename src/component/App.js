@@ -8,8 +8,8 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="App">
-                {/* <Options></Options> */}
-                <Question></Question>
+                <Options></Options>
+                {/* <Question></Question> */}
             </div>
         );
     }

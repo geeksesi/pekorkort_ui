@@ -27,9 +27,9 @@ const OptionsReduces = (state = {
             return state;
             break;
         case 'REMOVE_CATEGORY':
-            let categories_tmp = state.categories;
-            categories_tmp.splice(action.category_id, 1);
-            state.categories = categories_tmp;
+            // let categories_tmp = state.categories;
+            // categories_tmp.splice(action.category_id, 1);
+            // state.categories = categories_tmp;
             return state;
             break;
         case 'RANDOM_CHECK':

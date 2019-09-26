@@ -9,6 +9,10 @@ import {
     LENGTH_UPDATE,
     RESULT_VALUE,
 } from './Options'
+import {
+    SELECT_ANSWER,
+    NEW_QUEST,
+} from './Questions'
 
 
 export {
@@ -21,4 +25,6 @@ export {
     EMPTYS_CHECK,
     LENGTH_UPDATE,
     RESULT_VALUE,
+    SELECT_ANSWER,
+    NEW_QUEST,
 }

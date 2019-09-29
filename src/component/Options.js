@@ -59,7 +59,7 @@ export default class Options extends React.Component {
                 break;
             case 'result':
                 this.setState({ result: e.target.value });
-                this.props.RESULT_VALUE(e.target.checked);
+                this.props.RESULT_VALUE(e.target.value);
                 break;
             case 'length':
                 this.setState({ length: e.target.value });
@@ -112,9 +112,9 @@ export default class Options extends React.Component {
                     </Col>
                     <Radio.Group name="result" onChange={e => this.onChanged(e, this)} value={this.state.result}>
                         <Col span={6} className="box-answer-result1">
-                            <Radio value={0}> at the end </Radio>
+                            <Radio value={1}> at the end </Radio>
                             <br></br>
-                            <Radio value={1}> after answer</Radio>
+                            <Radio value={2}> after answer</Radio>
                         </Col>
                     </Radio.Group>
 

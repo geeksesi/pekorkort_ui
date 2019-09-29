@@ -3,7 +3,7 @@ const OptionsReduces = (state = {
     random: false,
     wrongs: false,
     emptys: false,
-    result: 0,
+    result: 1,
     length: 15,
     categories: []
 }, action) => {

@@ -14,8 +14,6 @@ import {
     EMPTYS_CHECK,
     LENGTH_UPDATE,
 } from './actions'
-// store.dispatch(OPTION_SUBMITE());
-
 
 ReactDOM.render(
     <Provider store={store}>

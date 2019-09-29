@@ -8,30 +8,25 @@ import {
     Checkbox, Radio
 } from 'antd';
 
+import { make_exam } from '../api/Api';
 
 export default class Options extends React.Component {
+
 
     constructor(props) {
         super(props);
 
         this.props = props;
-
-        console.log(props);
         this.state = props.options.Options;
+        let rows = [];
+        for (var i = 0; i < props.categories.length; i++) {
+            rows.push(<Menu.Item key={props.categories[i].id}>{props.categories[i].name}</Menu.Item>);
+        }
         this.menu = (
             <Menu onClick={e => this.category_handle(e, this)}>
-                <Menu.Item key={1}>
-                    Category One
-                    </Menu.Item>
-                <Menu.Item key={2}>
-                    Category twoo
-                    </Menu.Item>
-                <Menu.Item key={3}>
-                    Category Three
-                    </Menu.Item>
+                {rows}
             </Menu>
         )
-
     }
 
 
@@ -71,15 +66,21 @@ export default class Options extends React.Component {
                 this.props.LENGTH_UPDATE(e.target.value);
                 break;
             case 'category':
-                console.log(e);
                 let categories_tmp = this.state.categories;
                 categories_tmp.splice(e.target.key, 1);
                 this.setState({ categories: categories_tmp });
                 this.props.REMOVE_CATEGORY(e.target.key);
                 break;
         }
-        console.log(`check : ${e.target.name}`);
     }
+
+
+    submit() {
+        this.props.OPTION_SUBMITE;
+        console.log(this.state);
+        make_exam(this.state);
+    }
+
 
     render() {
         return (
@@ -139,7 +140,7 @@ export default class Options extends React.Component {
 
 
                 <Row type="flex" justify="center" align="top">
-                    <Col span={8}><Button onClick={this.props.OPTION_SUBMITE}>Submite</Button></Col>
+                    <Col span={8}><Button onClick={() => this.submit(this)}>Submite</Button></Col>
                 </Row>
             </div>
         );
